@@ -1,0 +1,72 @@
+.masonry{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+      height: 100vw;
+      width: 90%;
+      margin: 5%;
+    
+
+    .portfolio-filter {
+      background-color: #0f0f0f;
+      width: 100%;
+      height: 80px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 5;
+    }
+  
+    // Each flex item
+    .masonry-container{
+      position:relative;
+      width: 33.33%;  // 3 column
+      img{
+        width: 90%;
+        display: block;
+        transition:all .5s;
+        margin: 30px 5%;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 12px 32px 0px;
+        &:hover{
+          box-shadow: rgb(0, 0, 0) 0px 18px 50px 0px;
+          transform: scale(1.1);
+          }
+      }
+      .title{
+        position:absolute;
+        top:48%;
+        left:0;
+        width:100%;
+        font-size:30px;
+        text-shadow:0 0 8px rgba(0,0,0,0.42);
+      }
+      &:hover{
+        img{
+          opacity:1;
+        }
+      }
+    }
+  }
+  
+  // Mediaqueries
+  @media ( max-width : 860px ){
+    // set to 2 column
+    .masonry{
+      height:220vw;
+      .masonry-container{
+        width:50%;
+      }
+    }
+  }
+  @media ( max-width : 667px ){
+    // set to 1 column
+    .masonry{
+      height:auto;
+      .masonry-container{
+        width:100%;
+      }
+    }
+  }

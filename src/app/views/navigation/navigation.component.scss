@@ -1,0 +1,141 @@
+$color-pink: #f6b3e5;
+$color-lilac: #c876ff;
+$color-light-purple: #7232f2;
+$color-deep-purple: #20115b;
+$color-black: #010108;
+
+.Colon.blink {
+    opacity: 0.1;
+ }
+.logo-timer{
+    opacity: 0;
+}
+
+
+.navigation-container {
+    position: absolute;
+
+    .navigation-wrapper {
+        width: 80%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        .Colon.blink {
+            opacity: 0.1;
+         }
+        .logo-timer{
+            opacity: 0;
+            float: left;
+            font-size: 31vw;
+            line-height: 100vh;
+            font-weight: bold;
+            color: gray;
+        }
+        .big-logo {
+            float: left;
+            font-size: 31vw;
+            line-height: 100vh;
+            font-weight: bold;
+            color: gray;
+            opacity: 0.1;
+           
+        }
+         
+        .navigation-menu {
+            position: absolute;
+            top: 25%;
+            .navigation-menu-item {
+                margin-bottom: 3.125vw;
+            }
+            a{
+                padding: 0 40px;
+                &:hover {
+                    color: #d10000;
+                    i.material-icons {
+                        opacity: 1;
+                        transform: scale(2.5, 0.7) translateX(-2.5vw);
+                    }
+                    .menu-link-name {
+                        transform: translateX(-3.28125vw);
+                    }
+                }
+                .menu-link-number {
+                    font-size: 1vw;
+                    margin-right: 3.5vw;
+                }
+                .menu-link-name {
+                    transform: translateX(0vw);
+                    transition: all 0.5s 0s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+                
+                }
+                p {
+                    float: left;
+                    text-transform: uppercase;
+                    font-size: 4vw;
+                }
+                i.material-icons {
+                    font-size: 3vw;
+                    transform: scale(2.5,0.7) translateX(0vw);
+                    margin-left: 62px;
+                    opacity: 0;
+                    transition: all 0.5s 0s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+                
+                }
+            }
+
+            .navigation-brush-stroke {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 95%;
+                height: 100%;
+                clip: rect(0,0,55px,0);
+                transition: all .35s cubic-bezier(0.615,.19,.305,.91);
+                &.stroke-portfolio{
+                    background: url(../../../assets/images/menu_highlights/purple-paint-brush-stroke-1.png) no-repeat;
+                    background-size: 100% 45%;
+                }
+                &.stroke-tattoos{
+                    background: url(../../../assets/images/menu_highlights/purple-paint-brush-stroke-2.png) no-repeat;
+                    background-size: 100% 45%;
+                }
+            }
+            a {
+                position: relative;
+                display: block;
+                margin: 12px auto;
+                outline: 0;
+                color: #fff;
+                text-decoration: none;
+                height: 40px;
+                line-height: 40px;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .navigation-cover {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    nav{
+        position:absolute;
+    }
+}
+
+.cover-black {
+    background-color: $color-black;
+    background: url(../../../assets/images/noise_bg_b.jpg) no-repeat;
+    background-size: cover;
+}
+.cover-light-purple {
+    background-color: $color-light-purple;
+}
+.cover-deep-purple {
+    background-color: $color-deep-purple;
+}

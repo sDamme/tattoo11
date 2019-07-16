@@ -1,0 +1,30 @@
+<div class="portfolio-filter">
+<mat-form-field>
+  <mat-select placeholder="Style" panelClass="material-select">
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field>
+        <mat-select placeholder="Placement" panelClass="material-select">
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{food.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+</div>
+<mat-form-field>
+    <mat-select placeholder="Type" panelClass="material-select">
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{food.viewValue}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+<div *ngIf="portfolio" class="masonry">
+    <div *ngFor="let portfolio of portfolio" class="masonry-container"> 
+          <img [src]="portfolio.imagePath">
+          <p class="title">{{portfolio.style}}</p>
+    </div>
+
+</div>
